@@ -13,6 +13,23 @@ surpriseBtn.addEventListener("click", () => {
 });
 
 function createHearts() {
+  for (let i = 0; i < 25; i++) {
+    const heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+    heart.textContent = ["💙", "🩵", "☁️", "✨", "🧸"][Math.floor(Math.random() * 5)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 18 + 18 + "px";
+    heart.style.animationDuration = Math.random() * 2 + 2 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 4500);
+  }
+}
   for (let i = 0; i < 15; i++) {
     const heart = document.createElement("div");
 
