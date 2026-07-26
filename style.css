@@ -347,3 +347,45 @@ footer {
     font-size: 35px;
   }
 }
+/* Cute floating stickers 🧸🩵 */
+
+.sticker {
+  position: fixed;
+  font-size: 38px;
+  z-index: 5;
+  pointer-events: none;
+  animation: stickerFloat 4s ease-in-out infinite;
+}
+
+.sticker1 {
+  top: 18%;
+  left: 7%;
+}
+
+.sticker2 {
+  top: 65%;
+  right: 8%;
+  animation-delay: 1s;
+}
+
+.sticker3 {
+  bottom: 12%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.sticker4 {
+  top: 12%;
+  right: 12%;
+  animation-delay: 0.5s;
+}
+
+@keyframes stickerFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+}
