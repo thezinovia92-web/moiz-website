@@ -389,3 +389,58 @@ footer {
     transform: translateY(-12px) rotate(5deg);
   }
 }
+/* ✨ BIG SURPRISE REVEAL ✨ */
+
+.big-surprise {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.55);
+  color: #4b8db4;
+  line-height: 1.7;
+  font-size: 14px;
+  animation: revealPop 1s ease;
+}
+
+.big-surprise span {
+  font-weight: 700;
+  color: #368cbe;
+}
+
+@keyframes revealPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(20px);
+  }
+
+  60% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Floating hearts when the surprise opens */
+
+.floating-heart {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: 1000;
+  animation: heartUp 3s ease-out forwards;
+}
+
+@keyframes heartUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
